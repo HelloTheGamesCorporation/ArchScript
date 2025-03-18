@@ -55,25 +55,17 @@ mount /dev/"$answer""1" /mnt/boot/efi
 echo "What do you want?"
 echo "1) Xfce4"
 echo "2) Clearly system(only tty)"
-echo "3) Hyprland"
 read -p "What? : " dewm
 
 if [ "$dewm" == "1" ];
 then
-	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr sddm xfce4 xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans \
-	bash-completion networkmanager
+	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr sddm xfce4 xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
 fi
 
 if [ "$dewm" == "2" ];
 then
 	pacstap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
 fi
-
-if [ "$dewm" == "3" ];
-then
-	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr wayland xorg-xwayland ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager sddm hyprland
-fi
-
 
 cat archroot.sh | arch-chroot /mnt bash
 
