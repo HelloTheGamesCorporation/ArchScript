@@ -8,7 +8,7 @@ Minimum 512 gigabytes of disk space
 To install using this script you need to do the following:
 
 `pacman -Sy git` <br>
-`git clone https://github.com/HelloTheGamesCorporation/ArchinstallerScript.git` <br>
-`cd ArchinstallerScript` <br>
+`git clone https://github.com/HelloTheGamesCorporation/ArchScript.git` <br>
+`cd ArchScript` <br>
 `chmod +x install.sh` <br>
 `./install.sh`
