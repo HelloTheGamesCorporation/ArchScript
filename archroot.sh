@@ -38,22 +38,6 @@ echo
 echo "NOTE: I recommend changing the password for the user and root for security!"
 sleep 10
 
-pacman -Q hyprland > pacman.txt
-if [ "$(cat pacman.txt | grep 'hyprland')" == "hyprland" ];
-then
-	git clone https://aur.archlinux.org/yay-git.git
-	'cd yay-git | return'
-	makepkg -si
-	'cd .. | return'
-	echo "Password for user 'virt' = 1, for root = 1"
-	echo
-	echo "NOTE: I recommend changing the password for the user and root for security!"
-	sleep 10
-	'cd Arch-Hyprland | return'
-	chmod +x install.sh
-	su -c sh install.sh
-fi
-
 rm pacman.txt
 
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
