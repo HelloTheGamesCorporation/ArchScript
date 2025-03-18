@@ -1,0 +1,124 @@
+[32m[OK](B[m linux-headers is already installed. Skipping...
+[33m[NOTE](B[m Installing nvidia-dkms ...
+Sync Explicit (1): nvidia-dkms-570.86.16-2
+Sync Explicit (1): nvidia-dkms-570.86.16-2
+resolving dependencies...
+resolving dependencies...
+looking for conflicting packages...
+looking for conflicting packages...
+:: nvidia-dkms-570.86.16-2 and nvidia-570.86.16-2 are in conflict (NVIDIA-MODULE). Remove nvidia? [y/N] error: unresolvable package conflicts detected
+error: failed to prepare transaction (conflicting dependencies)
+
+:: nvidia-dkms-570.86.16-2 and nvidia-570.86.16-2 are in conflict
+:: nvidia-dkms-570.86.16-2 and nvidia-570.86.16-2 are in conflict (NVIDIA-MODULE). Remove nvidia? [y/N] error: unresolvable package conflicts detected
+error: failed to prepare transaction (conflicting dependencies)
+
+:: nvidia-dkms-570.86.16-2 and nvidia-570.86.16-2 are in conflict
+ -> error installing repo packages
+ -> error installing repo packages
+[1A[K[31m[ERROR](B[m nvidia-dkms failed to install :( , please check the install.log. You may need to install manually! Sorry I have tried :(
+[32m[OK](B[m nvidia-settings is already installed. Skipping...
+[32m[OK](B[m nvidia-utils is already installed. Skipping...
+[32m[OK](B[m libva is already installed. Skipping...
+[33m[NOTE](B[m Installing libva-nvidia-driver ...
+Sync Explicit (1): libva-nvidia-driver-0.0.13-1
+Sync Explicit (1): libva-nvidia-driver-0.0.13-1
+resolving dependencies...
+resolving dependencies...
+looking for conflicting packages...
+looking for conflicting packages...
+
+Package (1)                New Version  Net Change  Download Size
+
+extra/libva-nvidia-driver  0.0.13-1       0.09 MiB       0.04 MiB
+
+Total Download Size:   0.04 MiB
+Total Installed Size:  0.09 MiB
+
+:: Proceed with installation? [Y/n] 
+Package (1)                New Version  Net Change  Download Size
+
+extra/libva-nvidia-driver  0.0.13-1       0.09 MiB       0.04 MiB
+
+Total Download Size:   0.04 MiB
+Total Installed Size:  0.09 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+
+:: Retrieving packages...
+ libva-nvidia-driver-0.0.13-1-x86_64 downloading...
+ libva-nvidia-driver-0.0.13-1-x86_64 downloading...
+checking keyring...
+checking keyring...
+checking package integrity...
+checking package integrity...
+loading package files...
+loading package files...
+checking for file conflicts...
+checking for file conflicts...
+checking available disk space...
+checking available disk space...
+:: Processing package changes...
+installing libva-nvidia-driver...
+:: Processing package changes...
+installing libva-nvidia-driver...
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
+[1A[K[32m[OK](B[m Package [33mlibva-nvidia-driver(B[m has been successfully installed!
+==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'default'
+==> Using default configuration file: '/etc/mkinitcpio.conf'
+  -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux.img
+==> Starting build: '6.13.1-arch1-1'
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [microcode]
+  -> Running build hook: [modconf]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [keymap]
+  -> Running build hook: [consolefont]
+==> WARNING: consolefont: no font found in configuration
+  -> Running build hook: [block]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux.img'
+  -> Early uncompressed CPIO image generation successful
+==> Initcpio image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'fallback'
+==> Using default configuration file: '/etc/mkinitcpio.conf'
+  -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux-fallback.img -S autodetect
+==> Starting build: '6.13.1-arch1-1'
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [microcode]
+  -> Running build hook: [modconf]
+  -> Running build hook: [keyboard]
+==> WARNING: Possibly missing firmware for module: 'xhci_pci_renesas'
+  -> Running build hook: [keymap]
+  -> Running build hook: [consolefont]
+==> WARNING: consolefont: no font found in configuration
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: 'qed'
+==> WARNING: Possibly missing firmware for module: 'wd719x'
+==> WARNING: Possibly missing firmware for module: 'qla1280'
+==> WARNING: Possibly missing firmware for module: 'bfa'
+==> WARNING: Possibly missing firmware for module: 'qla2xxx'
+==> WARNING: Possibly missing firmware for module: 'aic94xx'
+  -> Running build hook: [filesystems]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-fallback.img'
+  -> Early uncompressed CPIO image generation successful
+==> Initcpio image generation successful
+options nvidia_drm modeset=1 fbdev=1
+GRUB bootloader detected
+nvidia-drm.modeset=1 added to /etc/default/grub
+nvidia_drm.fbdev=1 added to /etc/default/grub
+GRUB configuration regenerated
+Additional steps for GRUB completed
+blacklist nouveau
+install nouveau /bin/true

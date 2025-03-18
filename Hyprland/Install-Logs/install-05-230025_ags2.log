@@ -1,0 +1,121 @@
+ninja: Entering directory `/home/igorek/Arch-Hyprland/ags/build'
+[1/22] Generating GObject enum file subprojects/gvc/gvc-enum-types.c (wrapped by meson because command contains newlines, to capture output)
+[2/22] Generating GObject enum file subprojects/gvc/gvc-enum-types.h (wrapped by meson because command contains newlines, to capture output)
+[3/22] Compiling C object subprojects/gutils/libgutils.so.p/pam.c.o
+../subprojects/gutils/pam.c: In function ‘auth_thread’:
+../subprojects/gutils/pam.c:50:34: warning: unused parameter ‘object’ [-Wunused-parameter]
+   50 |                   gpointer       object,
+      |                   ~~~~~~~~~~~~~~~^~~~~~
+../subprojects/gutils/pam.c:52:34: warning: unused parameter ‘cancellable’ [-Wunused-parameter]
+   52 |                   GCancellable  *cancellable) {
+      |                   ~~~~~~~~~~~~~~~^~~~~~~~~~~
+[4/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-channel-map.c.o
+[5/22] Compiling C object subprojects/gvc/libgvc.so.p/meson-generated_.._gvc-enum-types.c.o
+[6/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-card.c.o
+../subprojects/gvc/gvc-mixer-card.c: In function ‘_pa_context_set_card_profile_by_index_cb’:
+../subprojects/gvc/gvc-mixer-card.c:200:77: warning: unused parameter ‘context’ [-Wunused-parameter]
+  200 | _pa_context_set_card_profile_by_index_cb (pa_context                       *context,
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+[7/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-event-role.c.o
+[8/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-sink-input.c.o
+[9/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-sink.c.o
+[10/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-source.c.o
+[11/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-stream.c.o
+../subprojects/gvc/gvc-mixer-stream.c: In function ‘on_channel_map_volume_changed’:
+../subprojects/gvc/gvc-mixer-stream.c:370:48: warning: unused parameter ‘channel_map’ [-Wunused-parameter]
+  370 | on_channel_map_volume_changed (GvcChannelMap  *channel_map,
+      |                                ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../subprojects/gvc/gvc-mixer-stream.c: In function ‘gvc_mixer_stream_real_change_port’:
+../subprojects/gvc/gvc-mixer-stream.c:817:52: warning: unused parameter ‘stream’ [-Wunused-parameter]
+  817 | gvc_mixer_stream_real_change_port (GvcMixerStream *stream,
+      |                                    ~~~~~~~~~~~~~~~~^~~~~~
+../subprojects/gvc/gvc-mixer-stream.c:818:52: warning: unused parameter ‘port’ [-Wunused-parameter]
+  818 |                                    const char     *port)
+      |                                    ~~~~~~~~~~~~~~~~^~~~
+../subprojects/gvc/gvc-mixer-stream.c: In function ‘gvc_mixer_stream_real_push_volume’:
+../subprojects/gvc/gvc-mixer-stream.c:824:52: warning: unused parameter ‘stream’ [-Wunused-parameter]
+  824 | gvc_mixer_stream_real_push_volume (GvcMixerStream *stream, gpointer *op)
+      |                                    ~~~~~~~~~~~~~~~~^~~~~~
+../subprojects/gvc/gvc-mixer-stream.c:824:70: warning: unused parameter ‘op’ [-Wunused-parameter]
+  824 | gvc_mixer_stream_real_push_volume (GvcMixerStream *stream, gpointer *op)
+      |                                                            ~~~~~~~~~~^~
+../subprojects/gvc/gvc-mixer-stream.c: In function ‘gvc_mixer_stream_real_change_is_muted’:
+../subprojects/gvc/gvc-mixer-stream.c:830:56: warning: unused parameter ‘stream’ [-Wunused-parameter]
+  830 | gvc_mixer_stream_real_change_is_muted (GvcMixerStream *stream,
+      |                                        ~~~~~~~~~~~~~~~~^~~~~~
+../subprojects/gvc/gvc-mixer-stream.c:831:56: warning: unused parameter ‘is_muted’ [-Wunused-parameter]
+  831 |                                        gboolean        is_muted)
+      |                                        ~~~~~~~~~~~~~~~~^~~~~~~~
+[12/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-control.c.o
+../subprojects/gvc/gvc-mixer-control.c: In function ‘gvc_mixer_control_stream_restore_cb’:
+../subprojects/gvc/gvc-mixer-control.c:170:50: warning: unused parameter ‘c’ [-Wunused-parameter]
+  170 | gvc_mixer_control_stream_restore_cb (pa_context *c,
+      |                                      ~~~~~~~~~~~~^
+../subprojects/gvc/gvc-mixer-control.c: In function ‘listify_hash_values_hfunc’:
+../subprojects/gvc/gvc-mixer-control.c:738:37: warning: unused parameter ‘key’ [-Wunused-parameter]
+  738 | listify_hash_values_hfunc (gpointer key,
+      |                            ~~~~~~~~~^~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘on_default_source_port_notify’:
+../subprojects/gvc/gvc-mixer-control.c:936:48: warning: unused parameter ‘pspec’ [-Wunused-parameter]
+  936 |                                GParamSpec     *pspec,
+      |                                ~~~~~~~~~~~~~~~~^~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘on_default_sink_port_notify’:
+../subprojects/gvc/gvc-mixer-control.c:1008:46: warning: unused parameter ‘pspec’ [-Wunused-parameter]
+ 1008 |                              GParamSpec     *pspec,
+      |                              ~~~~~~~~~~~~~~~~^~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘_stream_has_name’:
+../subprojects/gvc/gvc-mixer-control.c:1085:35: warning: unused parameter ‘key’ [-Wunused-parameter]
+ 1085 | _stream_has_name (gpointer        key,
+      |                   ~~~~~~~~~~~~~~~~^~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘match_stream_with_devices’:
+../subprojects/gvc/gvc-mixer-control.c:1254:46: warning: comparison of integer expressions of different signedness: ‘gint’ {aka ‘int’} and ‘guint’ {aka ‘unsigned int’} [-Wsign-compare]
+ 1254 |                         if (device_stream_id == stream_id) {
+      |                                              ^~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘free_priv_port_names’:
+../subprojects/gvc/gvc-mixer-control.c:2243:43: warning: unused parameter ‘control’ [-Wunused-parameter]
+ 2243 | free_priv_port_names (GvcMixerControl    *control)
+      |                       ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘gvc_mixer_control_set_headset_port’:
+../subprojects/gvc/gvc-mixer-control.c:2256:59: warning: unused parameter ‘id’ [-Wunused-parameter]
+ 2256 |                                     guint                 id,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~^~
+../subprojects/gvc/gvc-mixer-control.c:2257:59: warning: unused parameter ‘choice’ [-Wunused-parameter]
+ 2257 |                                     GvcHeadsetPortChoice  choice)
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘_pa_context_get_server_info_cb’:
+../subprojects/gvc/gvc-mixer-control.c:2813:55: warning: unused parameter ‘context’ [-Wunused-parameter]
+ 2813 | _pa_context_get_server_info_cb (pa_context           *context,
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘remove_event_role_stream’:
+../subprojects/gvc/gvc-mixer-control.c:2829:44: warning: unused parameter ‘control’ [-Wunused-parameter]
+ 2829 | remove_event_role_stream (GvcMixerControl *control)
+      |                           ~~~~~~~~~~~~~~~~~^~~~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘req_update_server_info’:
+../subprojects/gvc/gvc-mixer-control.c:2940:42: warning: unused parameter ‘index’ [-Wunused-parameter]
+ 2940 |                         int              index)
+      |                         ~~~~~~~~~~~~~~~~~^~~~~
+../subprojects/gvc/gvc-mixer-control.c: In function ‘_pa_context_subscribe_cb’:
+../subprojects/gvc/gvc-mixer-control.c:3280:56: warning: unused parameter ‘context’ [-Wunused-parameter]
+ 3280 | _pa_context_subscribe_cb (pa_context                  *context,
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+[13/22] Linking target subprojects/gutils/libgutils.so
+[14/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-source-output.c.o
+[15/22] Compiling C object subprojects/gvc/libgvc.so.p/gvc-mixer-ui-device.c.o
+[16/22] Linking target subprojects/gvc/libgvc.so
+[17/22] Generating subprojects/gutils/GUtils-1.0.gir with a custom command (wrapped by meson to set env)
+[18/22] Generating subprojects/gutils/GUtils-1.0.typelib with a custom command
+[19/22] Generating subprojects/gvc/Gvc-1.0.gir with a custom command (wrapped by meson to set env)
+[20/22] Generating subprojects/gvc/Gvc-1.0.typelib with a custom command
+[21/22] Generating src/typescript-compile with a custom command
+[22/22] Generating src/com.github.Aylur.ags.src_gresource with a custom command
+Installing subprojects/gvc/libgvc.so to /usr/local/lib
+Installing subprojects/gvc/Gvc-1.0.gir to /usr/local/share/com.github.Aylur.ags
+Installing subprojects/gvc/Gvc-1.0.typelib to /usr/local/lib
+Installing subprojects/gutils/libgutils.so to /usr/local/lib
+Installing subprojects/gutils/GUtils-1.0.gir to /usr/local/share/com.github.Aylur.ags
+Installing subprojects/gutils/GUtils-1.0.typelib to /usr/local/lib
+Installing src/com.github.Aylur.ags.src.gresource to /usr/local/share/com.github.Aylur.ags
+Installing /home/igorek/Arch-Hyprland/ags/subprojects/gutils/ags to /usr/local/etc/pam.d
+Installing /home/igorek/Arch-Hyprland/ags/build/src/com.github.Aylur.ags to /usr/local/share/com.github.Aylur.ags
+Running custom install script '/usr/bin/env bash /home/igorek/Arch-Hyprland/ags/post_install.sh /usr/local/share /usr/local/share/com.github.Aylur.ags /usr/local/bin com.github.Aylur.ags true /home/igorek/Arch-Hyprland/ags'
+[32m[OK](B[m ags installed successfully.
