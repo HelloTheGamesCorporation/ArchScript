@@ -43,8 +43,8 @@ echo "Now we will solve the problem with PGP keys (just in case)"
 sleep 15
 pacman-key --populate
 pacman -Sy archlinux-keyring
-pacman --init
-pacman --refresh-keys
+pacman-key --init
+pacman-key --refresh-keys
 
 mkfs.vfat /dev/"$answer""1"
 mkfs.ext4 /dev/"$answer""2"
