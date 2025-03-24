@@ -65,7 +65,7 @@ fi
 
 if [ "$dewm" == "2" ];
 then
-	pacstap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
+	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
 fi
 
 cat archroot.sh | arch-chroot /mnt bash
