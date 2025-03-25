@@ -28,11 +28,18 @@ echo "virt ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 pacman -Q networkmanager > pacman.txt
 pacman -Q sddm >> pacman.txt
+pacman -Q gdm >> pacman.txt
 
 if [ "$(cat pacman.txt | grep 'networkmanager')" == "networkmanager" ] && [ "$(cat pacman.txt | grep 'sddm')" == "sddm" ];
 then
 	systemctl enable NetworkManager
 	systemctl enable sddm
+fi
+
+if [ "$(cat pacman.txt | grep 'networkmanager')" == "networkmanager" ] && [ "$(cat pacman.txt | grep 'gdm')" == "gdm" ];
+then
+	systemctl enable NetworkManager
+	systemctl enable gdm
 fi
 
 echo "Password for user 'virt' = 1, for root = 1"
