@@ -16,7 +16,7 @@ echo
 echo "How do you want to partition disk?"
 echo "1)Auto(Use a read-made option(for virtual 20GB is required, and for hardware 512GB)"
 echo "2)Manually(via cfdisk)"
-read -p "Choose your variant: " answer2
+read -p "Choose your variant(Enter the number): " answer2
 sleep 5
 
 if [ "$answer2" == "1" ];
@@ -89,7 +89,9 @@ fi
 echo "What do you want?"
 echo "1) Xfce4"
 echo "2) Clearly system(only tty)"
-read -p "What? : " dewm
+echo "3) KDE Plasma"
+echo "4) GNOME"
+read -p "What?(Enter the number): " dewm
 
 if [ "$dewm" == "1" ];
 then
@@ -98,9 +100,18 @@ fi
 
 if [ "$dewm" == "2" ];
 then
-	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
+	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr bash-completion networkmanager
 fi
 
+if [ "$dewm" == "3" ];
+then
+	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager sddm plasma
+fi
+
+if [ "$dewm" == "4" ];
+then
+	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager gnome
+ fi
 cat archroot.sh | arch-chroot /mnt bash
 
 
