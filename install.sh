@@ -12,6 +12,7 @@ echo "nvme0n1"
 echo "sda"
 read -p "Choose a disk(Enter in words): " answer
 sleep 2
+echo
 echo "How do you want to partition disk?"
 echo "1)Auto(Use a read-made option(for virtual 20GB is required, and for hardware 512GB)"
 echo "2)Manually(via cfdisk)"
