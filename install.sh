@@ -1,5 +1,7 @@
 #!/bin/bash
+
 set -e
+
 echo "Welcome to arch-insraller! Which disk do you want to install it on?"
 echo
 echo "I recommend monitoring the execution of the script, because there may be moments where input from you will be needed."
@@ -77,6 +79,14 @@ then
 	reflector --save /etc/pacman.d/mirrorlist --protocol https
  	echo "reflector --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
  fi
+
+if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
+then
+	rm /mnt/etc/pacman.d/mirrorlist
+ 	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlsit
+else
+	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+fi
 
 echo "What do you want?"
 echo "1) Xfce4"
