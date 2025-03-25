@@ -53,6 +53,31 @@ mount /dev/"$answer""2" /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/"$answer""1" /mnt/boot/efi
 
+echo "What country do you live in? (This is necessary to generate mirrors that will allow you to install packages for the system faster)"
+echo
+echo "1)Russia"
+echo "2)Kazakhstan"
+echo "3)Others"
+read -p "Which?(Enter the number): " country
+
+if [ "$country" == "1" ] || [ "$country" == "1)" ];
+then
+	reflector --country Russia --save /etc/pacman.d/mirrorlist --protocol https
+ 	echo "reflector --country Russia --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
+ fi
+
+if [ "$country" == "2" ] || [ "$country" == "2)" ];
+then
+	reflector --country Kazakhstan --save /etc/pacman.d/mirrorlist --protocol https
+ 	echo "reflector --country Kazakhstan --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
+ fi
+
+ if [ "$country" == "3" ] || [ "$country" == "3)" ];
+then
+	reflector --save /etc/pacman.d/mirrorlist --protocol https
+ 	echo "reflector --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
+ fi
+
 echo "What do you want?"
 echo "1) Xfce4"
 echo "2) Clearly system(only tty)"
