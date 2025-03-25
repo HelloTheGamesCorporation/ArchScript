@@ -93,22 +93,22 @@ echo "3) KDE Plasma"
 echo "4) GNOME"
 read -p "What?(Enter the number): " dewm
 
-if [ "$dewm" == "1" ];
+if [ "$dewm" == "1" ] || [ "$dewm" == "1)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr sddm xfce4 xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
 fi
 
-if [ "$dewm" == "2" ];
+if [ "$dewm" == "2" ] || [ "$dewm" == "2)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr bash-completion networkmanager
 fi
 
-if [ "$dewm" == "3" ];
+if [ "$dewm" == "3" ] || [ "$dewm" == "3)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager sddm plasma
 fi
 
-if [ "$dewm" == "4" ];
+if [ "$dewm" == "4" ] || [ "$dewm" == "4)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager gnome
  fi
