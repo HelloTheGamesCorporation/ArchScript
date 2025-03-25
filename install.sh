@@ -66,19 +66,16 @@ read -p "Which?(Enter the number): " country
 if [ "$country" == "1" ] || [ "$country" == "1)" ];
 then
 	reflector --country Russia --save /etc/pacman.d/mirrorlist --protocol https
- 	echo "reflector --country Russia --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
  fi
 
 if [ "$country" == "2" ] || [ "$country" == "2)" ];
 then
 	reflector --country Kazakhstan --save /etc/pacman.d/mirrorlist --protocol https
- 	echo "reflector --country Kazakhstan --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
  fi
 
  if [ "$country" == "3" ] || [ "$country" == "3)" ];
 then
 	reflector --save /etc/pacman.d/mirrorlist --protocol https
- 	echo "reflector --save /etc/pacman.d/mirrorlist --protocol https" > /mnt/reflector.txt
  fi
 
 if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
