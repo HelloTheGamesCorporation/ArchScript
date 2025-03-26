@@ -77,15 +77,7 @@ then
 then
 	reflector --save /etc/pacman.d/mirrorlist --protocol https
  fi
-
-if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
-then
-	rm /mnt/etc/pacman.d/mirrorlist
- 	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlsit
-else
-	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
-fi
-
+ 
 echo "What do you want?"
 echo "1) Xfce4"
 echo "2) Clearly system(only tty)"
@@ -112,6 +104,15 @@ if [ "$dewm" == "4" ] || [ "$dewm" == "4)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager gnome
  fi
+
+ if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
+then
+	rm /mnt/etc/pacman.d/mirrorlist
+ 	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlsit
+else
+	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+fi
+
 cat archroot.sh | arch-chroot /mnt bash
 
 
