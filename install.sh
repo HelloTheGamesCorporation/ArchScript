@@ -68,17 +68,13 @@ read -p "Which?(Enter the number): " country
 if [ "$country" == "1" ] || [ "$country" == "1)" ];
 then
 	reflector --country Russia --save /etc/pacman.d/mirrorlist --protocol https
- fi
-
-if [ "$country" == "2" ] || [ "$country" == "2)" ];
+elif [ "$country" == "2" ] || [ "$country" == "2)" ];
 then
 	reflector --country Kazakhstan --save /etc/pacman.d/mirrorlist --protocol https
- fi
-
- if [ "$country" == "3" ] || [ "$country" == "3)" ];
+elif [ "$country" == "3" ] || [ "$country" == "3)" ];
 then
 	reflector --save /etc/pacman.d/mirrorlist --protocol https
- fi
+fi
  
 echo "What do you want?"
 echo "1) Xfce4"
@@ -90,24 +86,18 @@ read -p "What?(Enter the number): " dewm
 if [ "$dewm" == "1" ] || [ "$dewm" == "1)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr sddm xfce4 xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager
-fi
-
-if [ "$dewm" == "2" ] || [ "$dewm" == "2)" ];
+elif [ "$dewm" == "2" ] || [ "$dewm" == "2)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr bash-completion networkmanager
-fi
-
-if [ "$dewm" == "3" ] || [ "$dewm" == "3)" ];
+elif [ "$dewm" == "3" ] || [ "$dewm" == "3)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager sddm plasma
-fi
-
-if [ "$dewm" == "4" ] || [ "$dewm" == "4)" ];
+elif [ "$dewm" == "4" ] || [ "$dewm" == "4)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager gnome
 fi
 
- if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
+if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
 then
 	rm /mnt/etc/pacman.d/mirrorlist
  	cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlsit
