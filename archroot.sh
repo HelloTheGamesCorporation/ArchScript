@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 set -e
 
 if [ "$(mount | grep '/mnt ' | sed 's/on.*//')" == "/dev/nvme0n1p2" ];
