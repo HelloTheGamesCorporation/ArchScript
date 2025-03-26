@@ -26,9 +26,20 @@ echo "root:1" | chpasswd
 
 echo "virt ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
-pacman -Q networkmanager > pacman.txt
-pacman -Q sddm >> pacman.txt
-pacman -Q gdm >> pacman.txt
+if [ "$(pacman -Q networkmanager)" == "networkmanager" ];
+then
+	echo "networkmanager" >> pacman.txt
+fi
+
+if [ "$(pacman -Q sddm)" == "sddm" ];
+then
+	echo "sddm" >> pacman.txt
+fi
+
+if [ "$(pacman -Q gdm)" == "gdm" ];
+ then
+ 	echo "gdm" >> pacman.txt
+fi
 
 if [ "$(cat pacman.txt | grep 'networkmanager')" == "networkmanager" ];
 then
