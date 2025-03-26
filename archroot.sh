@@ -34,6 +34,7 @@ then
 	systemctl enable gdm
 else
 	echo "sddm or gdm not found, because you install a clean system (i.e. only tty)"
+ 	sleep 15
 fi
 
 echo "Password for user 'virt' = 1, for root = 1"
