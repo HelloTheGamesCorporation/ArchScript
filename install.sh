@@ -105,7 +105,7 @@ fi
 if [ "$dewm" == "4" ] || [ "$dewm" == "4)" ];
 then
 	pacstrap /mnt base base-devel linux linux-firmware linux-headers vim vi grub efibootmgr xorg ttf-ubuntu-font-family ttf-hack ttf-dejavu ttf-opensans bash-completion networkmanager gnome
- fi
+fi
 
  if [ "$(ls /mnt/etc/pacman.d/mirrorlist)" == "/mnt/etc/pacman.d/mirrorlist"];
 then
