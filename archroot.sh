@@ -28,6 +28,8 @@ echo "root:1" | chpasswd
 
 echo "virt ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
+touch pacman.txt
+
 if [ "$(pacman -Q networkmanager)" == "networkmanager" ];
 then
 	echo "networkmanager" >> pacman.txt
