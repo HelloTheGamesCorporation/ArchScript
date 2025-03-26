@@ -30,6 +30,11 @@ pacman -Q networkmanager > pacman.txt
 pacman -Q sddm >> pacman.txt
 pacman -Q gdm >> pacman.txt
 
+if [ "$(cat pacman.txt | grep 'networkmanager')" == "networkmanager" ];
+then
+	systemctl enable NetworkManager
+fi
+
 if [ "$(cat pacman.txt | grep 'networkmanager')" == "networkmanager" ] && [ "$(cat pacman.txt | grep 'sddm')" == "sddm" ];
 then
 	systemctl enable NetworkManager
