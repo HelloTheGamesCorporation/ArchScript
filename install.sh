@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 set -e
 
 echo "Welcome to arch-insraller! Which disk do you want to install it on?"
